@@ -5,8 +5,8 @@ stages:
     deps:
     - path: data/Sleep_health_and_lifestyle_dataset.csv
       hash: md5
-      md5: 4593a8d5c0b85b0f260dd0668b67a6ca
-      size: 24194
+      md5: 094208a0c87b90197f7af63fd6b3a23d
+      size: 24264
     - path: src/clean_data.py
       hash: md5
       md5: f1ff074555cfd0d44a6eed985e967dd6
@@ -14,15 +14,15 @@ stages:
     outs:
     - path: data/cleaned_data.csv
       hash: md5
-      md5: b662b256290aaa95b1e932d1e51bf390
-      size: 10965
+      md5: f2e887ace10638ac6868340eb9c9dadd
+      size: 11035
   remove_duplicates:
     cmd: python src/remove_duplicates.py
     deps:
     - path: data/cleaned_data.csv
       hash: md5
-      md5: b662b256290aaa95b1e932d1e51bf390
-      size: 10965
+      md5: f2e887ace10638ac6868340eb9c9dadd
+      size: 11035
     - path: src/remove_duplicates.py
       hash: md5
       md5: 601f2e0a24fa30e4e9d4ae09f5d30f49
