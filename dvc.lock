@@ -17,18 +17,18 @@ stages:
       md5: b662b256290aaa95b1e932d1e51bf390
       size: 10965
   remove_duplicates:
-    cmd: python src/remove_dublicates.py
+    cmd: python src/remove_duplicates.py
     deps:
     - path: data/cleaned_data.csv
       hash: md5
       md5: b662b256290aaa95b1e932d1e51bf390
       size: 10965
-    - path: src/remove_dublicates.py
+    - path: src/remove_duplicates.py
       hash: md5
-      md5: 3c516b8264db31506d4dbffcee43bc5f
+      md5: 601f2e0a24fa30e4e9d4ae09f5d30f49
       size: 441
     outs:
-    - path: data/remdublicated_data.csv
+    - path: data/remduplicated_data.csv
       hash: md5
       md5: b662b256290aaa95b1e932d1e51bf390
       size: 10965
