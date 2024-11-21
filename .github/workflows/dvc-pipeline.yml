@@ -27,7 +27,14 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install dvc
-        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi\
+
+    - name: Configure DVC with Google Drive Service Account
+      env:
+        GDRIVE_SERVICE_ACCOUNT_JSON: ${{ secrets.GDRIVE_SERVICE_ACCOUNT_JSON }}
+      run: |
+        echo "$GDRIVE_SERVICE_ACCOUNT_JSON" > /tmp/service-account.json
+        dvc remote modify --local myremote gdrive_service_account_json_file_path /tmp/service-account.json
 
     - name: Pull DVC data
       run: |
