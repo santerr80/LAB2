@@ -8,9 +8,9 @@ stages:
       - data/cleaned_data.csv
 
   remove_duplicates:
-    cmd: python src/remove_dublicates.py
+    cmd: python src/remove_duplicates.py
     deps:
-      - src/remove_dublicates.py
+      - src/remove_duplicates.py
       - data/cleaned_data.csv
     outs:
-      - data/remdublicated_data.csv
+      - data/remduplicated_data.csv

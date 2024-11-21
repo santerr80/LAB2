@@ -12,4 +12,4 @@ def remove_duplicates(input_file, output_file):
 
 if __name__ == "__main__":
     remove_duplicates('data/cleaned_data.csv',
-                      'data/remdublicated_data.csv')
+                      'data/remduplicated_data.csv')
