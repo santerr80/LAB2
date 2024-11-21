@@ -1,0 +1,16 @@
+stages:
+  clean_data:
+    cmd: python src/clean_data.py
+    deps:
+      - src/clean_data.py
+      - data/Sleep_health_and_lifestyle_dataset.csv
+    outs:
+      - data/cleaned_data.csv
+
+  remove_duplicates:
+    cmd: python src/remove_dublicates.py
+    deps:
+      - src/remove_dublicates.py
+      - data/cleaned_data.csv
+    outs:
+      - data/remdublicated_data.csv
