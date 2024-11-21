@@ -5,8 +5,8 @@ stages:
     deps:
     - path: data/Sleep_health_and_lifestyle_dataset.csv
       hash: md5
-      md5: fc2e4b0df4073a4544b725b4540513b6
-      size: 24137
+      md5: 4593a8d5c0b85b0f260dd0668b67a6ca
+      size: 24194
     - path: src/clean_data.py
       hash: md5
       md5: f1ff074555cfd0d44a6eed985e967dd6
